@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Model Performance | Smart Traffic AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+
+    <h2>🚦 Smart Traffic AI</h2>
+
+    <ul>
+
+        <li><a href="/">🏠 Home</a></li>
+        <li><a href="/dashboard">📊 Dashboard</a></li>
+        <li><a href="/prediction">🔮 Prediction</a></li>
+        <li><a href="/performance">📈 Performance</a></li>
+        <li><a href="/about">ℹ️ About</a></li>
+
+    </ul>
+
+</nav>
+
+<div class="performance-container">
+
+    <h1>📈 Machine Learning Model Performance</h1>
+
+    <p class="performance-subtitle">
+
+        Performance evaluation of the Random Forest Regression model
+        trained on Smart City Traffic data.
+
+    </p>
+
+    <!-- Metric Cards -->
+
+    <div class="performance-cards">
+
+        <div class="performance-card">
+
+            <h3>🎯 MAE</h3>
+
+            <h2>{{ mae }}</h2>
+
+            <p>Mean Absolute Error</p>
+
+        </div>
+
+        <div class="performance-card">
+
+            <h3>📊 RMSE</h3>
+
+            <h2>{{ rmse }}</h2>
+
+            <p>Root Mean Squared Error</p>
+
+        </div>
+
+        <div class="performance-card">
+
+            <h3>🚀 R² Score</h3>
+
+            <h2>{{ r2 }}</h2>
+
+            <p>Coefficient of Determination</p>
+
+        </div>
+
+    </div>
+
+    <!-- Model Details -->
+
+    <div class="model-details">
+
+        <h2>🤖 Model Information</h2>
+
+        <table>
+
+            <tr>
+
+                <td><strong>Machine Learning Model</strong></td>
+
+                <td>Random Forest Regressor</td>
+
+            </tr>
+
+            <tr>
+
+                <td><strong>Training Samples</strong></td>
+
+                <td>30,744</td>
+
+            </tr>
+
+            <tr>
+
+                <td><strong>Validation Samples</strong></td>
+
+                <td>17,376</td>
+
+            </tr>
+
+            <tr>
+
+                <td><strong>Features Used</strong></td>
+
+                <td>10</td>
+
+            </tr>
+
+            <tr>
+
+                <td><strong>Prediction Target</strong></td>
+
+                <td>Vehicles</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

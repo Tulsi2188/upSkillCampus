@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Smart Traffic AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <h2>🚦 Smart Traffic AI</h2>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+        <li><a href="/dashboard">Dashboard</a></li>
+
+        <li><a href="/prediction">Prediction</a></li>
+
+        <li><a href="/performance">Performance</a></li>
+
+        <li><a href="/about">About</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- ================= DASHBOARD ================= -->
+
+<div class="dashboard">
+
+    <h1>📊 Traffic Analytics Dashboard</h1>
+
+    <!-- KPI CARDS -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h2>48,120</h2>
+
+            <p>🚗 Total Records</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>4</h2>
+
+            <p>🚦 Junctions</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>2015 - 2017</h2>
+
+            <p>📅 Dataset Period</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Random Forest</h2>
+
+            <p>🤖 ML Model</p>
+
+        </div>
+
+    </div>
+
+    <!-- ================= GRAPH GALLERY ================= -->
+
+    <div class="graph-container">
+
+        <!-- Graph 1 -->
+
+        <div class="graph">
+
+            <h2>Traffic Distribution</h2>
+
+            <img src="{{ url_for('static',
+            filename='graphs/distribution.png') }}"
+            alt="Traffic Distribution">
+
+        </div>
+
+        <!-- Graph 2 -->
+
+        <div class="graph">
+
+            <h2>Traffic by Junction</h2>
+
+            <img src="{{ url_for('static',
+            filename='graphs/junction_comparison.png') }}"
+            alt="Traffic by Junction">
+
+        </div>
+
+        <!-- Graph 3 -->
+
+        <div class="graph">
+
+            <h2>Traffic by Hour</h2>
+
+            <img src="{{ url_for('static',
+            filename='graphs/hourly_traffic.png') }}"
+            alt="Traffic by Hour">
+
+        </div>
+
+        <!-- Graph 4 -->
+
+        <div class="graph">
+
+            <h2>Monthly Traffic Trend</h2>
+
+            <img src="{{ url_for('static',
+            filename='graphs/monthly_traffic.png') }}"
+            alt="Monthly Traffic">
+
+        </div>
+
+        <!-- Graph 5 -->
+
+        <div class="graph">
+
+            <h2>Correlation Heatmap</h2>
+
+            <img src="{{ url_for('static',
+            filename='graphs/correlation_heatmap.png') }}"
+            alt="Correlation Heatmap">
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

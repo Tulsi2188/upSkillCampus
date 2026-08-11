@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Traffic Prediction | Smart Traffic AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+
+    <h2>🚦 Smart Traffic AI</h2>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/prediction">Prediction</a></li>
+        <li><a href="/performance">Performance</a></li>
+        <li><a href="/about">About</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- Prediction Card -->
+
+<div class="prediction-page">
+
+    <div class="prediction-container">
+
+        <h1>🔮 AI Traffic Prediction</h1>
+
+        <p class="subtitle">
+            Enter the traffic details below to estimate the expected
+            number of vehicles at the selected junction.
+        </p>
+
+        <form method="POST">
+
+            <label>🚦 Junction</label>
+
+            <select name="junction" required>
+
+                <option value="1">Junction 1</option>
+                <option value="2">Junction 2</option>
+                <option value="3">Junction 3</option>
+                <option value="4">Junction 4</option>
+
+            </select>
+
+            <label>📅 Select Date</label>
+
+            <input type="date"
+                   name="date"
+                   required>
+
+            <label>🕒 Select Hour</label>
+
+            <select name="hour" required>
+
+                {% for i in range(24) %}
+
+                <option value="{{ i }}">
+
+                    {{ "%02d"|format(i) }}:00
+
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+            <button type="submit">
+
+                🚀 Predict Traffic
+
+            </button>
+
+        </form>
+
+        {% if prediction is not none %}
+
+            <div class="result">
+
+                <h3>🚦 Prediction Result</h3>
+
+                <h1>{{ prediction }} Vehicles</h1>
+
+                <h2>{{ traffic_level }}</h2>
+
+                <div class="summary">
+
+                    <p><strong>🚦 Junction:</strong> {{ summary.junction }}</p>
+
+                    <p><strong>📅 Date:</strong> {{ summary.date }}</p>
+
+                    <p><strong>🕒 Hour:</strong> {{ summary.hour }}</p>
+
+                </div>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

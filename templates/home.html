@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart City Traffic Forecasting</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>🚦 Smart City</h2>
+
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/dashboard">Dashboard</a></li>
+
+            <li><a href="/prediction">Prediction</a></li>
+
+            <li><a href="/performance">Performance</a></li>
+
+            <li><a href="/about">About</a></li>
+
+        </ul>
+
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                AI-Powered <span>Smart City</span><br>
+                Traffic Forecasting System
+            </h1>
+
+            <p>
+
+               <p>
+                Predict city traffic using Machine Learning and historical traffic data.
+                Analyze traffic patterns across multiple junctions, visualize insights,
+                and forecast vehicle flow through an interactive AI-powered dashboard.
+            </p>
+            </p>
+
+            <a href="/prediction">
+
+                <button>🚦 Start Predicting</button>
+
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="{{ url_for('static',
+            filename='images/SMART City.jpg') }}">
+            
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
